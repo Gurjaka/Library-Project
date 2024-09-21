@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Library registration</title>
+</head>
+<body style="font-family: Fira Code; background-color: #2E3440;">
+  <center>
+    <h1>
+      <strong>
+        <p style="color: #5e81ac;">
+          Register in our library
+        </p>
+      </strong>
+    </h1>
+
+    <form action="/" method="POST">
+      <b>
+	<h3>
+	<p> 
+          <label style="color: #81a1c1;" for="email">Email:</label>
+          <input style="background-color: #3B4252; border-color: #364252; border-radius: 8px; color: #FFFFFF;" type="text" id="email" name="email"><br><br>
+          <label style="color: #81a1c1;" for="username">Username:</label>
+          <input style="background-color: #3B4252; border-color: #364252; border-radius: 8px; color: #FFFFFF;" type="text" id="username" name="username"><br><br>
+          <label style="color: #81a1c1;" for="password">Password:</label>
+	  <input style="background-color: #3B4252; border-color: #364252; border-radius: 8px; color: #FFFFFF;" type="text" id="password" name="password"><br><br>
+	  <label style="color: #81a1c1;" for="submit">Submit:</label>
+	  <input style="background-color: #3B4252; border-color: #364252; border-radius: 8px; color: #FFFFFF;" type="submit" value="Submit">
+        </p>
+	</h3>
+      </b>
+    </form>  
+
+
+    {% if email_error %}
+      <p style="color: #bf616a;">
+        <b>
+        This email has already been registered.
+      	</b>
+      </p>
+    {% elif username_error %} 
+      <p style="color: #bf616a;">
+        <b>
+          This username has already been registered.
+      	</b>
+      </p>
+    {% endif %}
+  <center>
+</body>
+</html>
